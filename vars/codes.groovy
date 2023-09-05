@@ -10,9 +10,10 @@ def newDeployment(jobname,ip,appname)
 {
 sh "scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}.war"
 }
-def runSelenium()
+def runSelenium(jobname)
 {
   sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.jar"
+  ///home/ubuntu/.jenkins/workspace/DecltiveSharedLibrary/.git
 }
 
  
